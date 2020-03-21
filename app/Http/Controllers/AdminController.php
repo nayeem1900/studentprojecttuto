@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
 use Session;
-session_start();
+    session_start();
 
 class AdminController extends Controller
 {
@@ -65,14 +65,17 @@ class AdminController extends Controller
             ->first();
         if ($result) {
 
-            session::put('admin_email', $result->admin_email);
-            session::put('admin_id', $result->admin_id);
+            Session::put('admin_email', $result->admin_email);
+            Session::put('admin_id', $result->admin_id);
 
             return redirect:: to('/admin_dashboard');
         }
 
 
         else{
+
+            Session::put('exception', "Email or Password, Invalid");
+
             return redirect:: to('/backend');
 
         }
