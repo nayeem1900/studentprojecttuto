@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
+use Session;
+session_start();
 
 class AdminController extends Controller
 {
@@ -31,35 +35,49 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param  \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
 
-  /** public function login_dashboard()
-   {
-       return view('admin_dashboard');
-   } */
+    /** public function login_dashboard()
+     * {
+     * return view('admin_dashboard');
+     * } */
 
 
- public function admin_dashboard()
+    public function admin_dashboard()
     {
 
 
-
-
-return view('admin_dashboard');
+        return view('admin_dashboard');
         //
     }
 
 
-public function login_dashboard(Request $request){
+    function login_dashboard(Request $request)
+    {
 
-        $email=$request->admin_email;
-    $password=md5($request->admin_password);
-    $result=DB::table('admin_tbl');
-    $email=$request->admin_email;
+        $email = $request->admin_email;
+        $password = md5($request->admin_password);
+        $result = DB::table('admin_tbl')
+            ->where('admin_email', $email)
+            ->where('admin_password', $password)
+            ->first();
+        if ($result) {
 
-}
+            session::put('admin_email', $result->admin_email);
+            session::put('admin_id', $result->admin_id);
+
+            return redirect:: to('/admin_dashboard');
+        }
+
+
+        else{
+            return redirect:: to('/backend');
+
+        }
+    }
+
 
 
 

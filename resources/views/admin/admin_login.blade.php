@@ -36,11 +36,11 @@
 
                             <div class="form-group">
                                 <label>Username or email *</label>
-                                <input type="text" class="form-control p_input">
+                                <input type="text" class="form-control p_input" name="admin_email" placeholder="email">
                             </div>
                             <div class="form-group">
                                 <label>Password *</label>
-                                <input type="text" class="form-control p_input">
+                                <input type="text" class="form-control p_input" name="admin_password" placeholder="password">
                             </div>
                             <div class="form-group d-flex align-items-center justify-content-between">
                                 <div class="icheck-square">
