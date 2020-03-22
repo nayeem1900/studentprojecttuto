@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-
+//logout
+Route::get('logout','AdminController@logout');
 
 
 

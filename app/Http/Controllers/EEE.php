@@ -3,12 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Facades\DB;
-use Session;
-    session_start();
 
-class AdminController extends Controller
+class EEE extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +13,6 @@ class AdminController extends Controller
      */
     public function index()
     {
-
-
         //
     }
 
@@ -35,65 +29,13 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-
-    /** public function login_dashboard()
-     * {
-     * return view('admin_dashboard');
-     * } */
-
-
-    public function admin_dashboard()
+    public function store(Request $request)
     {
-
-
-        return view('admin_dashboard');
         //
     }
-//logout part
-
-public function logout()
-{
-    Session:: put('admin_name', null);
-    Session:: put('admin_id', null);
-    return Redirect::to('/backend');
-
-}
-
-
-//loging part
-    function login_dashboard(Request $request)
-    {
-
-        $email = $request->admin_email;
-        $password = md5($request->admin_password);
-        $result = DB::table('admin_tbl')
-            ->where('admin_email', $email)
-            ->where('admin_password', $password)
-            ->first();
-        if ($result) {
-
-            Session::put('admin_email', $result->admin_email);
-            Session::put('admin_id', $result->admin_id);
-
-            return redirect:: to('/admin_dashboard');
-        }
-
-
-        else{
-
-            Session::put('exception', "Email or Password, Invalid");
-
-            return redirect:: to('/backend');
-
-        }
-    }
-
-
-
-
 
     /**
      * Display the specified resource.
