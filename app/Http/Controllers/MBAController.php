@@ -4,8 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class EEE extends Controller
+class MBA extends Controller
 {
+
+    public function mba()
+    {
+
+
+        return view('admin.mba');
+        //
+    }
+
+
+
     /**
      * Display a listing of the resource.
      *

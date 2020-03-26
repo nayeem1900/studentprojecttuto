@@ -111,7 +111,7 @@
                 <li class="list">
                     <div class="profile"><img src="http://via.placeholder.com/47x47" alt=""></div>
                     <div class="info">
-                        <p>Thomas Douglas</p>
+                        <p>Nayeem</p>
                         <p>Available</p>
                     </div>
                 </li>
@@ -125,7 +125,7 @@
     <!-- partial:partials/_navbar.html -->
     <nav class="navbar navbar-light col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="images/salt_logo.svg" alt="Logo"></a>
+            <a class="navbar-brand brand-logo" href="{{URL::to('admin_dashboard')}}"><img src="images/pic/ibflogo.png" alt=""></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-center">
             <button class="navbar-toggler navbar-toggler align-self-center mr-2" type="button" data-toggle="minimize">
@@ -157,7 +157,7 @@
                         <span class="count bg-danger">4</span>
                     </a>
                     <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{URL::to('viewprofile')}}">
                             <div class="sender-img">
                                 <img src="http://via.placeholder.com/47x47" alt="">
                                 <span class="badge badge-success">&nbsp;</span>
@@ -167,7 +167,7 @@
 
                             </div>
                         </a>
-                        <a class="dropdown-item" href="#">
+                        <a class="dropdown-item" href="{{URL::to('setting')}}">
                             <div class="sender-img">
                                 <img src="http://via.placeholder.com/47x47" alt="">
                                 <span class="badge badge-success">&nbsp;</span>
@@ -216,7 +216,7 @@
                         <img src="http://via.placeholder.com/47x47" alt="">
                     </div>
                     <div class="details">
-                        <p class="user-name">Dave Mattew</p>
+                        <p class="user-name">Nayeem Chowdhury</p>
                         <p class="designation">Developer</p>
                     </div>
                 </div>
@@ -225,16 +225,16 @@
                 <ul class="nav">
                     <!--main pages start-->
                     <li class="nav-item nav-category">
-                        <span class="nav-link">Main</span>
+                        <span class="nav-link">Nursing Institute</span>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">
+                        <a class="nav-link" href="{{URL::to('/allstudent')}}">
                             <i class="mdi mdi-gauge menu-icon"></i>
                             <span class="menu-title">All Student</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="pages/widgets.html">
+                        <a class="nav-link" href="{{URL::to('/addstudent')}}">
                             <i class="mdi mdi-puzzle menu-icon"></i>
                             <span class="menu-title">Add Student</span>
                             <span class="badge badge-danger badge-pill ml-auto">New</span>
@@ -249,10 +249,10 @@
                         <div class="collapse" id="layoutsSubmenu">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/boxed-layout.html">Tution Fees</a>
+                                    <a class="nav-link" href="{{URL::to('/tutionfee')}}">Tution Fees</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/rtl-layout.html">Result</a>
+                                    <a class="nav-link" href="{{URL::to('/result')}}">Result</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="pages/layout/horizontal-menu.html">Horizontal Menu</a>
@@ -269,19 +269,19 @@
                         <div class="collapse" id="sidebar_layouts">
                             <ul class="nav flex-column sub-menu">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/compact-menu.html">CSE</a>
+                                    <a class="nav-link" href="{{URL::to('/cse')}}">CSE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/sidebar-collapsed.html">BBA</a>
+                                    <a class="nav-link" href="{{URL::to('/bba')}}">BBA</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/sidebar-hidden.html">EEE</a>
+                                    <a class="nav-link" href="{{URL::to('/eee')}}">EEE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/sidebar-hidden-overlay.html">ECE</a>
+                                    <a class="nav-link" href="{{URL::to('/ece')}}">ECE</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="pages/layout/sidebar-fixed.html">MBA</a>
+                                    <a class="nav-link" href="{{URL::to('/mba')}}">MBA</a>
                                 </li>
                             </ul>
                         </div>
@@ -319,24 +319,7 @@
 
 
 
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/apps/calendar.html">
-                            <i class="mdi mdi-calendar-check menu-icon"></i>
-                            <span class="menu-title">Calendar</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/apps/todo-list.html">
-                            <i class="mdi mdi-calendar-text menu-icon"></i>
-                            <span class="menu-title">To-do list</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="pages/apps/gallery.html">
-                            <i class="mdi mdi-folder-multiple-image menu-icon"></i>
-                            <span class="menu-title">Gallery</span>
-                        </a>
-                    </li>
+
                     <!--Apps end-->
 
                 </ul>
@@ -382,6 +365,9 @@
 <script src="node_modules/chart.js/dist/Chart.min.js"></script>
 <script src="node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
 <!-- End plugin js for this page-->
+<script src="{{asset('node_modules/datatables.net/js/jquery.dataTables.js')}}"></script>
+<script src="{{asset('node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js')}}"></script>
+<script src="{{asset('js/data-table.js')}}"></script>
 <!-- inject:js -->
 <script src="js/off-canvas.js"></script>
 <script src="js/hoverable-collapse.js"></script>

@@ -26,7 +26,7 @@ Route::get('/', function () {
 Route::post('adminlogin','AdminController@login_dashboard');
 Route::get('admin_dashboard','AdminController@admin_dashboard');
 
-Route::group(['middleware' =>['LockCheck']], function(){
+Route::group(['middleware' =>['LockCheck']], function() {
 
     Route::get('/backend', function () {
         return view('admin.admin_login');
@@ -35,3 +35,29 @@ Route::group(['middleware' =>['LockCheck']], function(){
 
 
 });
+
+
+Route::get('addstudent', 'AddstudentController@addstudent');
+
+Route::post('save_student', 'AddstudentController@savestudent');
+//CSE
+    Route::get('cse', 'AdminController@cse');
+
+//save student''''''
+
+   // Route::post('save_student', 'AdminController@savestudent');
+//view profile
+    Route::get('viewprofile', 'AdminController@viewprofile');
+//setting
+    Route::get('setting', 'AdminController@setting');
+
+//All Student
+    Route::get('allstudent', 'AllstudentController@allstudent');
+//All Student
+    Route::get('tutionfee', 'AdminController@tution');
+    //All Student
+//Route::get('cse','CSEController@cse');
+    //All Student
+    Route::get('bba', 'AdminController@bba');
+    Route::get('eee', 'AdminControllerr@bba');
+    Route::get('ece', 'AdminController@bba');

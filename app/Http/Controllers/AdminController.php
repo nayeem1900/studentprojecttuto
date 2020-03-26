@@ -5,8 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\DB;
+
 use Session;
-    session_start();
+session_start();
 
 class AdminController extends Controller
 {
@@ -43,6 +44,69 @@ class AdminController extends Controller
      * {
      * return view('admin_dashboard');
      * } */
+//add student
+
+
+
+
+//addstudent end
+
+//all student
+
+
+
+//allstudent end
+
+
+
+//tutionfee
+
+    public function tution()
+    {
+
+
+        return view('admin.tutionfee');
+        //
+    }
+//tutionfee end
+
+//view profile
+
+    public function viewprofile()
+    {
+
+
+        return view('admin.view');
+        //
+    }
+
+    //setting
+
+    public function setting()
+    {
+
+
+        return view('admin.setting');
+
+    }
+//cse start
+
+    public function cse (){
+
+        return view('admin.cse');
+    }
+
+
+//cse end
+
+//SAVE STUDENT
+
+
+    public function sa (){
+
+        return view('admin.cse');
+    }
+
 
 
     public function admin_dashboard()
@@ -73,6 +137,8 @@ public function logout()
             ->where('admin_email', $email)
             ->where('admin_password', $password)
             ->first();
+
+
         if ($result) {
 
             Session::put('admin_email', $result->admin_email);
