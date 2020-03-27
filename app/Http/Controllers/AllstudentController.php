@@ -24,6 +24,12 @@ class AllstudentController extends Controller
     }
 
 
+    public function studentdelet($student_id){
+
+        DB:: table('students')->where ('student_id',$student_id)
+            ->delete();
+        return redirect::to('all');
+    }
 
 
 

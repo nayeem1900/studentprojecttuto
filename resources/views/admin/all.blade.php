@@ -21,14 +21,14 @@
                              <tbody>
                              @foreach($all_student_info as $v_student)
                              <tr>
-                                 <td>1</td>
-                                 <td>27/08/12</td>
+                                 <td>{{$v_student->student_name}}</td>
+                                 <td>{{$v_student->student_roll}}</td>
 
 
                                  <td>
                                      <button class="btn btn-outline-primary">View</button>
                                      <button class="btn btn-outline-warning">Edit</button>
-                                     <button class="btn btn-outline-danger">Delet</button>
+                                     <a href="{{URL::to('student_delet'.$v_student->student_id)}}" id="delet"> <button class="btn btn-outline-danger">Delet </button></a>
                                  </td>
                              </tr>
                              @endforeach

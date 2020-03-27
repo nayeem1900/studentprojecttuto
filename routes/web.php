@@ -52,8 +52,10 @@ Route::post('save_student', 'AddstudentController@savestudent');
     Route::get('setting', 'AdminController@setting');
 
 //All Student
+    Route::get('all', 'AllstudentController@allstudent');
     Route::get('allstudent', 'AllstudentController@allstudent');
-    Route::get('/student_delet/{student_id}', 'AllstudentController@allstudentdelet');
+    Route::get('student_delet{student_id}', 'AllstudentController@studentdelet');
+   // Route::get('/student_delet/{student_id}', 'AllstudentController@allstudentdelet');
 //All Student
     Route::get('tutionfee', 'AdminController@tution');
     //All Student
