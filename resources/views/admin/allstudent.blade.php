@@ -2,7 +2,6 @@
 
 @section('content')
 
-
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Data table</h2>
@@ -17,19 +16,18 @@
                             </tr>
                             </thead>
                             <tbody>
-                          @foreach($all_student_info as $v_student)
-                              <tr>
-                                <td>{{$v_student->student_name}}</td>
-                                <td>{{$v_student->student_roll}}</td>
 
-                                <td>
+                              <tr>
+                                <td>{student_name</td>
+                                <td>student_roll</td>
+
                                     <button class="btn btn-outline-primary">View</button>
                                     <button class="btn btn-outline-warning">Edit</button>
-                                    <button class="btn btn-outline-danger">Delete</button>
+                                     <button class="btn btn-outline-danger">Delete</button>
+                                  </td>
 
-                                </td>
                             </tr>
-                              @endforeach
+
                             </tbody>
                         </table>
                     </div>
