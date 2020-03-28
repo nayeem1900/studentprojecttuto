@@ -1,4 +1,3 @@
-
 @extends('layout')
 
 @section('content')
@@ -47,7 +46,7 @@
     </div>
 
 
-        </div>
+    </div>
     </div>
 
 

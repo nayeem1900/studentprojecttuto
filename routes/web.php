@@ -41,7 +41,7 @@ Route::get('addstudent', 'AddstudentController@addstudent');
 
 Route::post('save_student', 'AddstudentController@savestudent');
 //CSE
-    Route::get('cse', 'AdminController@cse');
+    //Route::get('cse', 'AdminController@cse');
 
 //save student''''''
 
@@ -56,13 +56,18 @@ Route::post('save_student', 'AddstudentController@savestudent');
     Route::get('allstudent', 'AllstudentController@allstudent');
     Route::get('student_delet{student_id}', 'AllstudentController@studentdelet');
     Route::get('studentview{student_id}', 'AllstudentController@viewstudent');
+    Route::get('student_edit{student_id}', 'AllstudentController@studentedit');
+    Route::post('/update/{student_id}','AllstudentController@update');
 
+
+
+  //  Route::post('student_update{student_id}', 'AllstudentController@studentupdate');
    // Route::get('/student_delet/{student_id}', 'AllstudentController@allstudentdelet');
 //All Student
-    Route::get('tutionfee', 'AdminController@tution');
+  //  Route::get('tutionfee', 'AdminController@tution');
     //All Student
 //Route::get('cse','CSEController@cse');
     //All Student
-    Route::get('bba', 'AdminController@bba');
-    Route::get('eee', 'AdminControllerr@bba');
-    Route::get('ece', 'AdminController@bba');
+    //Route::get('bba', 'AdminController@bba');
+    //Route::get('eee', 'AdminControllerr@bba');
+    //Route::get('ece', 'AdminController@bba');

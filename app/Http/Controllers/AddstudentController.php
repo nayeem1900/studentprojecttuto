@@ -17,20 +17,21 @@ class AddstudentController extends Controller
         //
     }
 
-        public function savestudent(Request$request){
+        public function savestudent(Request$request)
+        {
 
-        $students =new Student;
-            $students->student_name=$request->student_name;
-            $students->student_roll=$request->student_roll;
-            $result=$students->save();
+            $students = new Student;
+            $students->student_name = $request->student_name;
+            $students->student_roll = $request->student_roll;
+            $result = $students->save();
 
-            if ($result){
+            if ($result) {
 
                 return redirect('/addstudent');
 
             }
 
-
         }
+
 
 }

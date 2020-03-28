@@ -27,7 +27,7 @@
 
                                  <td>
                                     <a href="{{URL:: to('studentview'.$v_student->student_id)}}"><button class="btn btn-outline-primary">View</button></a>
-                                     <button class="btn btn-outline-warning">Edit</button>
+                                     <a href="{{URL:: to('student_edit'.$v_student->student_id)}}"> <button class="btn btn-outline-warning">Edit</button></a>
                                      <a href="{{URL::to('student_delet'.$v_student->student_id)}}" id="Delete"> <button class="btn btn-outline-danger">Delet </button></a>
                                  </td>
                              </tr>
